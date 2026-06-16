@@ -96,9 +96,27 @@
 ### Screenshots
 ![Optimized Counter](./task%204/Screenshot%20(173).png)
 
+
+##  Bonus Challenge: React Hooks Dashboard
+
+### Hook Overview
+* **What it does:** Seamlessly merges `useContext`, `useRef`, `useMemo`, and `useCallback` into a unified management panel dashboard tracking local array states, input actions, and thematic updates.
+* **Why it is used:** Demonstrates production-ready optimization patterns where context-wide re-renders are kept away from heavy child data modules.
+
+### Implementation Details
+* Integrated global themes via a shared provider architecture layout.
+* Isolated product searching loops using high-utility value memoization arrays.
+* Secured function pointer reference matching for list element generation fields.
+
+### Screenshots
+![Optimized Counter](./task%205/Screenshot%20(178).png)
+
+
 ### Challenges Faced
 * **Missing React.memo Partnership:** Using `useCallback` on the parent functions didn't stop the child button components from rendering again at first. Fix: Remembered that `useCallback` *only* keeps the function reference stable; the child element itself must be explicitly wrapped in `React.memo` to check those stable references.
 
 ### How it improves React applications
 * Prevents cascades of unnecessary child re-renders down large component trees.
 * Keeps memory allocation clean by reusing identical function pointers instead of generating new garbage-collection items on every user click.
+
+
